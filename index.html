@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Futebol de Bolinhas Avançado</title>
+  <style>
+    body { background: #111; color: white; font-family: sans-serif; text-align: center; }
+    #menu, #gameUI { display: none; }
+    canvas { background: green; margin-top: 20px; border: 5px solid white; }
+    button { padding: 10px 20px; margin: 5px; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <div id="menu">
+    <h1>Futebol de Bolinhas</h1>
+    <button onclick="startGame('human-vs-human')">2 Jogadores</button>
+    <button onclick="startGame('human-vs-ia')">1 Jogador vs IA</button>
+    <p>Escolha cor do jogador 1: <input type="color" id="skin1" value="#0000FF"></p>
+    <p>Cor do jogador 2 / IA: <input type="color" id="skin2" value="#FF0000"></p>
+  </div>
+
+  <div id="gameUI">
+    <p id="placar">Azul 0 x 0 Vermelho</p>
+    <p id="tempo">Tempo: 60</p>
+    <canvas id="campo" width="800" height="400"></canvas>
+    <br><button onclick="backToMenu()">Voltar ao menu</button>
+  </div>
+
+  <script src="jogo.js"></script>
+</body>
+</html>
